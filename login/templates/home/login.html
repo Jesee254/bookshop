@@ -1,0 +1,22 @@
+{%extends 'home/layout.html'%}
+{%block body%}
+    <div class="container">
+        <h3>sign in</h3>
+        <form action="{%url 'login:login'%}" method="post">
+            {%csrf_token%}
+            
+            <div>
+            <input type="text" placeholder="username" name="username" required><br>
+            
+           <input type="password" placeholder="password" name="password" required><br>
+            <button class="btn" name="login">login</button>
+            </div>
+         <div>
+            <p>don't have an account?</p>
+            <a href="{%url 'login:register'%}">sign up</a>
+         </div>
+    
+        </form>
+    </div>
+
+{%endblock%}

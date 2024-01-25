@@ -1,0 +1,26 @@
+{%extends 'home/layout.html'%}
+
+{%block body%}
+<div>
+   <form action="" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    <input type="file" accept="image/*" name="image" id="uploadimage"><br>
+    <input type="submit" value="upload">
+   </form>
+    <h2>Hello {{fname}} </h2><br>
+    <h3>explore available books</h3>
+    <ul> 
+    {%for book in books%}
+      <li>{{book}}</li>
+    {%empty%}
+       <li>no books</li>
+    {%endfor%}
+    </ul>
+
+</div>
+<div>
+    <a href="{%url 'login:login'%}"><button>sign out</button></a>
+</div>
+    
+
+{%endblock%}

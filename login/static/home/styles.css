@@ -1,0 +1,22 @@
+body{
+    background-color:#151425;
+}
+div{
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+}
+
+div input{
+    padding: 5px;
+    margin: 8px;
+
+}
+
+div form button{
+     margin-top: 10px;
+}
+a{
+    text-decoration: none;
+    color: #09a1b3;
+}
